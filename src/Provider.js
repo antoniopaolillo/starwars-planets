@@ -18,7 +18,7 @@ function Provider({ children }) {
   const [filteredData, setFilteredData] = useState();
 
   function starWarsAPI() {
-    fetch('https://swapi.co/api/planets/')
+    fetch('https://swapi-trybe.herokuapp.com/api/planets/')
       .then((data) => data.json())
       .then((response) => setInitialData({ data: response, isFetching: false, sucess: true }))
       .catch((error) => alert(error));
